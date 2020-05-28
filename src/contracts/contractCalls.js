@@ -1,4 +1,4 @@
-import { signAndSendTransaction } from '../transaction'
+import { signAndSendTransaction, createTx } from '../transaction/transaction'
 
 
 /**
@@ -47,3 +47,4 @@ export const approveErc20 = async (contract, spender, amount, from, to) => {
         [spender, amount]) //params
     return signAndSendTransaction(tx, privateKey)
 }
+

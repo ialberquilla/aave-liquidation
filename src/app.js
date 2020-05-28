@@ -6,9 +6,9 @@ require('dotenv').config()
 setGlobals();
 
 const collateralAddress = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" 
-const reserveAddress = "0xf80a32a835f79d7787e8a8ee5721d0feafd78108"
-const userLiquidated = "0xe4509F2ce63DED82e74e9e7E648c1A69e90cD2C4" 
-const purchaseAmount = '5'
+const reserveAddress = "0xb36938c51c4f67e5e1112eb11916ed70a772bd75"
+const userLiquidated = "0x922257aefb9d47bfe36e7d72288c2cfb56457a40" 
+const purchaseAmount = '10'
 const receiveATokens = false
 
 liquidate(

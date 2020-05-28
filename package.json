@@ -6,13 +6,16 @@
   "scripts": {
     "build": "babel src -d dist --source-maps",
     "start": "babel-node src/app.js",
-    "test": "mocha --require @babel/register --require babel-polyfill './test'"
+    "test": "mocha --require @babel/register --require babel-polyfill './test'",
+    "debug": "babel-node src/debug.js"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "ethereum-input-data-decoder": "^0.3.0",
     "web3": "^1.2.7"
   },
   "devDependencies": {

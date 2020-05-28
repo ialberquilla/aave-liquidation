@@ -8,6 +8,7 @@ import LendingPoolABI
 import LendingPoolCoreABI
     from '../abi/LendingPoolCore.json'
 
+
 require('dotenv').config()
 const web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/" + process.env.INFURA_KEY));
 
@@ -90,5 +91,4 @@ describe('Liquidation integration test', () => {
         expect(userCompoundedBorrowBalance * LIQUIDATION_CLOSE_FACTOR_PERCENT)
             .to.be.greaterThan(Number(purchaseAmount))
     })
-
 })

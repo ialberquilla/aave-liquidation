@@ -1,11 +1,15 @@
 
 import {
-    liquidationCall,
     getLendingPoolAddress
 } from '../contracts/contractInstances'
 
+import { liquidationCall } from '../contracts/contractCalls'
+
 import ERC20ABI from '../../abi/ERC20ABI.json'
 import { approveErc20 } from '../contracts/contractCalls';
+import LendingPoolAddressesProviderABI from '../../abi/LendingPoolAddressesProvider.json'
+import LendingPoolABI from '../../abi/LendingPool.json'
+import { getLpCoreAddress } from '../contracts/contractInstances'
 
 
 export const liquidate = async (collateral, reserve, user, purchaseAmount, receiveAToken) => {
@@ -37,12 +41,12 @@ export const liquidate = async (collateral, reserve, user, purchaseAmount, recei
     await approveErc20(
         erc20Contract,
         lpCoreAddress,
-        purchaseAmount,
+        web3.utils.toWei(purchaseAmount, "ether"),
         fromAccount,
         reserve)
 
     //Liquidation call
-    await liquidationCall(
+    const liquidate = await liquidationCall(
         lpContract,
         lpAddress,
         collateral,
@@ -54,6 +58,8 @@ export const liquidate = async (collateral, reserve, user, purchaseAmount, recei
             console.log(e)
             throw Error(`Error on liquidation call: ${e.message}`)
         })
+
+    console.log(liquidate)
 
 }
 
