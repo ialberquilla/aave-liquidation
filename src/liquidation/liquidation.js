@@ -59,6 +59,7 @@ export const liquidate = async (collateral, reserve, user, purchaseAmount, recei
             throw Error(`Error on liquidation call: ${e.message}`)
         })
 
+    
     console.log(liquidate)
 
 }

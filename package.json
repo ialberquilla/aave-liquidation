@@ -6,9 +6,7 @@
   "scripts": {
     "build": "babel src -d dist --source-maps",
     "start": "babel-node src/app.js",
-    "test": "mocha --require @babel/register --require babel-polyfill './test'",
-    "debug": "babel-node src/debug.js"
-
+    "test": "mocha --require @babel/register --require babel-polyfill './test'"
   },
   "keywords": [],
   "author": "",
