@@ -1,6 +1,9 @@
 # Liquidation Aave protocol example
 This repository is created only with educational purposes, it may contain errors. Use by your OWN risk
 
+More info in Medium post
+* [Aave liquidation script](https://medium.com/coinmonks/creating-a-liquidation-script-for-aave-defi-protocol-ef584ad87e8f) 
+
 # Installation instructions
 
 1. Create the .env file
