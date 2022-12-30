@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "babel-polyfill": "^6.26.0",
     "@babel/register": "^7.9.0",
     "@babel/cli": "^7.8.4",
